@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testPage</title>
+    <!--semantic ui css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+</head>
+<body>
+<div class="ui container">
+    <h2 class="ui dividing header">Form</h2>
+    <!--状态 error warning success 可以用js判断-->
+    <!--显示加载状态 loading-->
+    <form action="" class="ui form error">
+
+        <!--对应状态的提示信息-->
+        <!--错误-->
+        <div class="ui error message">
+            <div class="header">不好意思</div>
+            <p>我们暂时不支持配送到你指定的地址</p>
+        </div>
+        <!--警告-->
+        <div class="ui warning message">
+            <div class="header">手机验证</div>
+            <p>请进行手机验证</p>
+        </div>
+        <!--成功-->
+        <div class="ui success message">
+            <div class="header">成功了</div>
+            <p>你的货物已发出</p>
+        </div>
+        <!--等分 two-->
+        <div class="fields">
+            <!--设置field所在的列份数 six wide-->
+            <!--必填项 required-->
+            <div class="required field">
+                <label for="">姓名</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label for="">电话</label>
+                <input type="text">
+            </div>
+        </div>
+<!--下拉选-->
+        <div class="field">
+            <label for="">国家</label>
+            <!--添加multiple属性 可多选-->
+            <select multiple name="" id="" class="ui dropdown">
+                <option value="">请选择国家</option>
+                <option value="CN">中国</option>
+                <option value="US">美国</option>
+            </select>
+        </div>
+
+        <!--单选-->
+        <div class="inline fields">
+            <label for="payment">选择支付方式：</label>
+            <div class="field">
+                <div class="ui radio checkbox">
+                    <input type="radio" name="payment" id="">
+                    <label for="">支付宝</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui radio checkbox">
+                    <input type="radio" name="payment" id="">
+                    <label for="">PayPal</label>
+                </div>
+            </div>
+
+        </div>
+        <!--复选框-->
+        <div class="field">
+            <!--开关样式 toggle-->
+            <!--滑动样式 slider-->
+            <div class="ui slider checkbox">
+                <input type="checkbox" name="" id="">
+                <label for="">短信通知</label>
+            </div>
+        </div>
+        <button type="submit" class="ui button">提交</button>
+    </form>
+
+
+</div>
+
+
+<!--jQuery js-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<!--semantic ui js-->
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+</body>
+<script>
+    $(".message .close").click(function () {
+        $(this).closest(".message").transition("fade")
+    });
+    /*美化多选框*/
+    $("select.dropdown").dropdown();
+    /*点击文字即可单选*/
+    $(".ui.radio.checkbox").checkbox();
+    /*点击文字即可选中*/
+    $(".ui.checkbox").checkbox();
+</script>
+</html>

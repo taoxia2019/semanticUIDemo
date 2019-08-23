@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testPage</title>
+    <!--semantic ui css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+</head>
+<body>
+<div class="ui container">
+<h2 class="ui dividing header">Table</h2>
+    <!-- 条纹 striped-->
+    <!-- 单元格线条 celled-->
+    <!--选中高亮 selectable-->
+    <!--简单表格 basic-->
+    <!--极简表格 very basic-->
+    <!--紧凑表格 compact-->
+    <!--大表格 padded-->
+    <!--还可以用 small mini large控制表格大小-->
+    <!--等分，线条 four column celled-->
+    <!--颜色-->
+<table class="ui green table">
+    <thead>
+        <tr>
+            <th>名称</th>
+            <th>创建者</th>
+            <th>年代</th>
+            <th>LESS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bootstrap</td>
+            <td>@mdo and @fat</td>
+            <td>2011</td>
+            <!-- 表示表格状态色彩-->
+            <td class="positive">是</td>
+        </tr>
+        <tr>
+            <td>Semantic Ui</td>
+            <td>jack lukic</td>
+            <td>2013</td>
+            <td class="positive">是</td>
+        </tr>
+        <tr>
+            <td>Foundation</td>
+            <td>zurb</td>
+            <td>2011</td>
+            <td class="negative">否</td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+</div>
+
+
+
+
+<!--jQuery js-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<!--semantic ui js-->
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+</body>
+<script>
+    $(".message .close").click(function () {
+        $(this).closest(".message").transition("fade")
+    })
+</script>
+</html>
