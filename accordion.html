@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testPage</title>
+    <!--semantic ui css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+</head>
+<body>
+<div class="ui container" style="padding:50px">
+    <h2 >accordion</h2>
+    <div class="ui section divider"></div>
+
+    <div class="ui inverted segment">
+        <!--style 边框-->
+        <!--fluid 跟随容器宽度-->
+   <div class="ui inverted  accordion">
+       <div class="active title">
+           <i class="dropdown icon"></i>
+           绿巨人
+       </div>
+       <div class="active content">
+           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas feugiat consequat diam. Maecenas metus. Vivamus diam purus, cursus a, commodo non, facilisis vitae, nulla. Aenean dictum lacinia tortor. Nunc iaculis, nibh non iaculis aliquam, orci felis euismod neque, sed ornare massa mauris sed velit.</p>
+       </div>
+       <div class="title">
+           <i class="dropdown icon"></i>
+            黑寡妇
+       </div>
+       <div class="content">
+           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas feugiat consequat diam. Maecenas metus. Vivamus diam purus, cursus a, commodo non, facilisis vitae, nulla. Aenean dictum lacinia tortor. Nunc iaculis, nibh non iaculis aliquam, orci felis euismod neque, sed ornare massa mauris sed velit.</p>
+       </div>
+       <div class="title">
+           <i class="dropdown icon"></i>
+           钢铁侠
+       </div>
+       <div class="content">
+           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas feugiat consequat diam. Maecenas metus. Vivamus diam purus, cursus a, commodo non, facilisis vitae, nulla. Aenean dictum lacinia tortor. Nunc iaculis, nibh non iaculis aliquam, orci felis euismod neque, sed ornare massa mauris sed velit.</p>
+       </div>
+   </div>
+    </div>
+
+</div>
+
+
+<!--jQuery js-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<!--semantic ui js-->
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+</body>
+<script>
+    $(".ui.accordion").accordion({
+        /*是否展开多个*/
+        exclusive:false,
+        /*动作方式，默认点击*/
+        on:"mouseover",
+        /*动画时间*/
+        duration:400
+    });
+
+</script>
+</html>
